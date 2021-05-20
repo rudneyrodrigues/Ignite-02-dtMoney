@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  width: 100%;
+  overflow-x: auto;
   margin-top: 4rem;
 
   table {
