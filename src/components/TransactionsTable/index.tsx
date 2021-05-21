@@ -27,17 +27,17 @@ export function TransactionsTable() {
 
         <tbody>
           <tr>
-            <td>Desenvolvimento de Websites</td>
-            <td className="deposit">R$12.000,00</td>
-            <td>Desenvolvimento</td>
-            <td>17/05/2021</td>
+            <td className="title">Desenvolvimento de Websites</td>
+            <td className="deposit amount">R$12.000,00</td>
+            <td className="category">Desenvolvimento</td>
+            <td className="date">17/05/2021</td>
           </tr>
 
           <tr>
-            <td>Aluguel</td>
-            <td className="withdraw">- R$1.100,00</td>
-            <td>Casa</td>
-            <td>18/05/2021</td>
+            <td className="title">Aluguel</td>
+            <td className="withdraw amount">- R$1.100,00</td>
+            <td className="category">Casa</td>
+            <td className="date">18/05/2021</td>
           </tr>
         </tbody>
       </table>

@@ -1,3 +1,4 @@
+import { BsPlus } from 'react-icons/bs';
 import logoImg from '../../assets/logo.svg';
 
 import {
@@ -15,7 +16,7 @@ export function Header({ onOpenNewTransactionModal }: HeaderProps) {
       <Content>
         <img src={logoImg} alt="dt money" />
         <button type="button" onClick={onOpenNewTransactionModal}>
-          Nova transação
+          <BsPlus /> <p>Nova transação</p>
         </button>
       </Content>
     </Container>

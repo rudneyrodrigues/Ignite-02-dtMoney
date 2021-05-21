@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  overflow-x: auto;
   margin-top: 4rem;
+  display: relative;
 
   table {
     width: 100%;
@@ -22,10 +22,14 @@ export const Container = styled.div`
       border: none;
       background: var(--shape);
       color: var(--text-body);
-      border-radius: .25rem;
 
       &:first-child {
         color: var(--text-title);
+        border-radius: .25rem 0 0 .25rem;
+      }
+
+      &:last-child {
+        border-radius: 0 .25rem .25rem 0;
       }
 
       &.deposit {
@@ -34,6 +38,37 @@ export const Container = styled.div`
 
       &.withdraw {
         color: var(--red);
+      }
+    }
+  }
+
+  @media(max-width: 1080px) {
+    margin-top: 2rem;
+
+    table {
+      thead {
+        display: none;
+      }
+
+      tbody {
+        tr {
+          margin-bottom: 2rem;
+
+          td {
+            display: block;
+            text-align: center;
+
+            & + td {
+              padding-top: 0;
+            }
+
+            &.amount {
+              grid-area: amount;
+              font-size: 1.25rem;
+              font-weight: 600;
+            }
+          }
+        }
       }
     }
   }

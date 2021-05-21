@@ -23,10 +23,37 @@ export const Content = styled.div`
     border-radius: 0.25rem;
     height: 3rem;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     transition: filter .2s;
+
+    svg {
+      display: none;
+      margin-right: .5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      color: #fff;
+    }
 
     &:hover {
       filter: brightness(0.95);
+    }
+  }
+
+  @media(max-width: 1080px) {
+    button {
+      padding: 1rem;
+
+      svg {
+        display: initial;
+        margin-right: 0;
+      }
+
+      p {
+        display: none;
+      }
     }
   }
 `;
