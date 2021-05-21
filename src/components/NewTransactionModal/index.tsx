@@ -32,8 +32,8 @@ export function NewTransactionModal({
 
         <h2>Cadastrar transação</h2>
 
-        <input type="text" placeholder="Título" />
-        <input type="number" placeholder="Valor" />
+        <input type="text" className="title" placeholder="Título" />
+        <input type="number" className="amount" placeholder="Valor" />
 
         <TransactionTypeContainer>
           <button
@@ -51,7 +51,7 @@ export function NewTransactionModal({
           </button>
         </TransactionTypeContainer>
 
-        <input type="text" placeholder="Categoria" />
+        <input type="text" className="category" placeholder="Categoria" />
 
         <button type="submit">Cadastrar</button>
       </Container>

@@ -72,6 +72,47 @@ export const Container = styled.form`
       filter: brightness(.9);
     }
   }
+
+  @media(max-height: 500px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "title title"
+      "input1 button"
+      "input2 button"
+      "input3 submit";
+    gap: 0 1rem;
+
+    h2 {
+      grid-area: title;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    input {
+      /* margin-top: 1rem; */
+
+      &.title {
+        grid-area: input1;
+      }
+
+      &.amount {
+        grid-area: input2;
+      }
+
+      &.category {
+        grid-area: input3;
+        margin-top: 1rem;
+      }
+    }
+
+    button[type="submit"] {
+      grid-area: submit;
+      margin-top: 1rem;
+    }
+  }
 `;
 
 export const TransactionTypeContainer = styled.div`
@@ -108,6 +149,20 @@ export const TransactionTypeContainer = styled.div`
       margin-left: 1rem;
       font-size: 1rem;
       color: var(--text-title);
+    }
+  }
+
+  @media(max-height: 500px) {
+    grid-area: button;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0;
+
+    button {
+      width: 100%;
     }
   }
 `;

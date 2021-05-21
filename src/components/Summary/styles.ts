@@ -34,7 +34,7 @@ export const Container = styled.div`
     }
   }
 
-  @media(max-width: 1080px) {
+  @media(max-width: 720px) {
     overflow-x: auto;
     gap: 1rem;
 

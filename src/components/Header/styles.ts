@@ -42,7 +42,7 @@ export const Content = styled.div`
     }
   }
 
-  @media(max-width: 1080px) {
+  @media(max-width: 400px) {
     button {
       padding: 1rem;
 
