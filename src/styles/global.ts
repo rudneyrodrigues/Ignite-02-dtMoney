@@ -88,6 +88,7 @@ export const GlobalStyle = createGlobalStyle`
 
     .react-modal-content {
       padding: 3rem 1.5rem;
+      border-radius: 1rem 1rem 0 0;
     }
   }
 
@@ -95,6 +96,7 @@ export const GlobalStyle = createGlobalStyle`
     .react-modal-content {
       max-width: none;
       height: 100%;
+      border-radius: 0;
 
       display: flex;
       align-items: center;

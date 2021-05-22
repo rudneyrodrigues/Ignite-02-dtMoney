@@ -34,13 +34,13 @@ export const Container = styled.div`
     }
   }
 
-  @media(max-width: 720px) {
+  @media(max-width: 770px) {
     overflow-x: auto;
     gap: 1rem;
 
     div {
       width: 75vw;
-      height: 11rem;
+      height: 12.5rem;
     }
   }
 `;

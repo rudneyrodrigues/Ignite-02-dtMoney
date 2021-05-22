@@ -53,19 +53,37 @@ export const Container = styled.div`
       tbody {
         tr {
           margin-bottom: 2rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-areas:
+          "title title"
+          "amount amount"
+          "category date";
 
           td {
             display: block;
-            text-align: center;
 
-            & + td {
-              padding-top: 0;
+            &.title {
+              grid-area: title;
+              padding-bottom: 0;
             }
 
             &.amount {
               grid-area: amount;
-              font-size: 1.25rem;
-              font-weight: 600;
+              font-size: 1.5rem;
+              padding-top: 0;
+            }
+
+            &.category {
+              grid-area: category;
+            }
+
+            &.date {
+              grid-area: date;
+              
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
             }
           }
         }
