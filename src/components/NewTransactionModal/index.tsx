@@ -1,12 +1,12 @@
 import { FormEvent, useState } from 'react';
 import Modal from 'react-modal';
 import { AiOutlineClose } from 'react-icons/ai';
+import { api } from '../../services/api';
 
 import incomeImg from '../../assets/income.svg';
 import outcomeImg from '../../assets/outcome.svg';
 
 import { Container, TransactionTypeContainer, RadioBox } from './styles';
-
 interface NewTransactionModalProps {
   isOpen: boolean;
   onRequestClose?: () => void;
@@ -28,14 +28,23 @@ export function NewTransactionModal({
       return alert('Insira um valor maior que zero')
     }
 
-    console.log({
+    const data = {
       title: title,
       value: value,
       type: type,
       category: category
-    })
+    }
 
-    return alert('Cadastro efetuado com sucesso')
+    api.post('/transactions', data)
+      .then(
+        () => {
+          return alert('Cadastro efetuado com sucesso');
+        }
+      )
+
+    // return (
+    //   alert('Cadastro efetuado com sucesso')
+    // );
   }
 
   return (
@@ -69,7 +78,6 @@ export function NewTransactionModal({
           className="amount"
           placeholder="Valor"
           min={1}
-          value={value}
           onChange={e => setValue(Number(e.target.value))}
           required
         />
